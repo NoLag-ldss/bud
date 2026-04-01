@@ -70,7 +70,7 @@ end)
 local title = Instance.new("TextLabel", frame)
 title.Size = UDim2.new(1, -100, 0, 50)
 title.Position = UDim2.new(0, 90, 0, 20)
-title.Text = "XeonScripts"
+title.Text = "OIF.Fan"
 title.TextColor3 = Color3.fromRGB(186, 85, 211)
 title.TextTransparency = 0.1
 title.TextStrokeColor3 = Color3.fromRGB(138, 43, 226)
@@ -99,7 +99,7 @@ end)
 local subtitle = Instance.new("TextLabel", frame)
 subtitle.Size = UDim2.new(1, -100, 0, 20)
 subtitle.Position = UDim2.new(0, 90, 0, 65)
-subtitle.Text = "Garden Scripts & More"
+subtitle.Text = "Only Steal A Brainrot!"
 subtitle.TextColor3 = Color3.fromRGB(150, 120, 180)
 subtitle.TextTransparency = 0.3
 subtitle.Font = Enum.Font.Gotham
