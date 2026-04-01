@@ -70,7 +70,7 @@ end)
 local title = Instance.new("TextLabel", frame)
 title.Size = UDim2.new(1, -100, 0, 50)
 title.Position = UDim2.new(0, 90, 0, 20)
-title.Text = "OIF.Fan"
+title.Text = "@IOA.FAN"
 title.TextColor3 = Color3.fromRGB(186, 85, 211)
 title.TextTransparency = 0.1
 title.TextStrokeColor3 = Color3.fromRGB(138, 43, 226)
