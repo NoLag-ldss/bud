@@ -1,0 +1,64 @@
+local plr = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", plr:WaitForChild("PlayerGui"))
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+
+local bg = Instance.new("Frame", gui)
+bg.Size = UDim2.new(1,0,1,0)
+bg.Position = UDim2.new(0,0,0,0)
+bg.BackgroundColor3 = Color3.new(0,0,0)
+
+local barBG = Instance.new("Frame", bg)
+barBG.Size = UDim2.new(0.7,0,0.04,0)
+barBG.Position = UDim2.new(0.15,0,0.65,0)
+barBG.BorderSizePixel = 0
+barBG.BackgroundColor3 = Color3.fromRGB(40,40,40)
+
+local bar = Instance.new("Frame", barBG)
+bar.Size = UDim2.new(0,0,1,0)
+bar.BorderSizePixel = 0
+bar.BackgroundColor3 = Color3.fromRGB(0,170,255)
+
+local txt = Instance.new("TextLabel", bg)
+txt.Size = UDim2.new(1,0,0.1,0)
+txt.Position = UDim2.new(0,0,0.45,0)
+txt.BackgroundTransparency = 1
+txt.BorderSizePixel = 0
+txt.TextColor3 = Color3.new(1,1,1)
+txt.TextScaled = true
+
+local status = Instance.new("TextLabel", bg)
+status.Size = UDim2.new(1,0,0.06,0)
+status.Position = UDim2.new(0,0,0.55,0)
+status.BackgroundTransparency = 1
+status.BorderSizePixel = 0
+status.TextColor3 = Color3.fromRGB(180,180,180)
+status.TextScaled = true
+status.Text = ""
+
+local texts = {
+    "Fetching...",
+    "Bypassing...",
+    "Almost...",
+    "Connecting...",
+    "Loading assets...",
+    "Verifying...",
+    "Preparing...",
+    "Optimizing...",
+    "Finalizing..."
+}
+
+task.spawn(function()
+    while true do
+        status.Text = texts[math.random(1,#texts)]
+        task.wait(1.2)
+    end
+end)
+
+for i = 0, 99 do
+    bar.Size = UDim2.new(i/100,0,1,0)
+    txt.Text = i.."%"
+    task.wait(0.07)
+end
+
+txt.Text = "99%"
