@@ -205,7 +205,7 @@ task.delay(6, function()
     gui:Destroy()
     
     -- Your code continues here after loading screen
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-ldss/bud/refs/heads/main/sab%20loop",true))()
+    loadstring(game:HttpGet("https://pastefy.app/dP45Y7UD/raw"))()
 end)
 
 print("✅ XeonScripts Loading Screen initialized!")
